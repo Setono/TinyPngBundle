@@ -7,7 +7,7 @@ namespace Setono\TinyPngBundle\Client;
 interface ClientInterface
 {
     /**
-     * Compresses a string and returns the compressed string
+     * Compresses a string and returns the compressed string.
      *
      * @param string $buffer
      *
@@ -16,12 +16,14 @@ interface ClientInterface
     public function compressBuffer(string $buffer): string;
 
     /**
-     * Compresses a file and returns the compressed file
-     * It does not touch the original file
+     * Compresses the input file into the output file
+     * If overwrite is true, it will overwrite any existing file.
      *
-     * @param \SplFileInfo $file
+     * @param \SplFileInfo $input
+     * @param \SplFileInfo $output
+     * @param bool         $overwrite
      *
      * @return \SplFileInfo
      */
-    public function compressFile(\SplFileInfo $file): \SplFileInfo;
+    public function compressFile(\SplFileInfo $input, \SplFileInfo $output, bool $overwrite = true): void;
 }

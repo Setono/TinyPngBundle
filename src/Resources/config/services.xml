@@ -3,6 +3,12 @@
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
         <defaults autowire="true" autoconfigure="true" public="false" />
-        <!--<prototype namespace="Loevgaard\SyliusOptimizeImagesPlugin\Command\" resource="../../Command/*" />-->
+
+        <service id="Setono\TinyPngBundle\Client\Client">
+            <argument>%setono.tiny_png.api_key%</argument>
+            <argument>%setono.tiny_png.proxy%</argument>
+        </service>
+
+        <service id="Setono\TinyPngBundle\Client\ClientInterface" alias="Setono\TinyPngBundle\Client\Client" />
     </services>
 </container>
