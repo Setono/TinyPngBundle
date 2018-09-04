@@ -2,11 +2,13 @@
 
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
-        <service id="Setono\TinyPngBundle\Client\Client">
+        <defaults autowire="false" autoconfigure="false" public="true" />
+
+        <service id="setono_tiny_png.client" class="Setono\TinyPngBundle\Client\Client">
             <argument>%setono.tiny_png.api_key%</argument>
             <argument>%setono.tiny_png.proxy%</argument>
         </service>
 
-        <service id="Setono\TinyPngBundle\Client\ClientInterface" alias="Setono\TinyPngBundle\Client\Client" public="true" />
+        <service id="Setono\TinyPngBundle\Client\ClientInterface" alias="setono_tiny_png.client" />
     </services>
 </container>
