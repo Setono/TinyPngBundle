@@ -10,6 +10,8 @@
         }
     ],
     "require": {
+        "php": "^7.1",
+
         "symfony/config": "^4.1",
         "symfony/dependency-injection": "^4.1",
         "tinify/tinify": "^1.5"
@@ -18,7 +20,8 @@
         "symfony/phpunit-bridge": "^4.1",
         "symplify/easy-coding-standard": "^4.6",
         "phpstan/phpstan": "^0.10.3",
-        "matthiasnoback/symfony-dependency-injection-test": "^3.0"
+        "matthiasnoback/symfony-dependency-injection-test": "^3.0",
+        "phpunit/phpunit": "^7"
     },
     "prefer-stable": true,
     "autoload": {
