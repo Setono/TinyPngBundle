@@ -1,0 +1,37 @@
+{
+    "name": "setono/tiny-png-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony bundle to integrate TinyPNG with Symfony",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joachim Løvgaard",
+            "email": "joachim@loevgaard.dk"
+        }
+    ],
+    "require": {
+        "symfony/config": "^4.1",
+        "symfony/dependency-injection": "^4.1"
+    },
+    "require-dev": {
+        "symfony/phpunit-bridge": "^4.1",
+        "symplify/easy-coding-standard": "^4.6",
+        "phpstan/phpstan": "^0.10.3",
+        "matthiasnoback/symfony-dependency-injection-test": "^3.0"
+    },
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Setono\\TinyPngBundle\\": "src/",
+            "Setono\\TinyPngBundle\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "bin-dir": "bin"
+    }
+}

@@ -1,0 +1,29 @@
+language: php
+
+dist: trusty
+
+sudo: false
+
+php:
+    - 7.1
+    - 7.2
+
+cache:
+    directories:
+        - ~/.composer/cache
+
+env:
+    matrix:
+        - SYMFONY_VERSION="3.4.*"
+        - SYMFONY_VERSION="4.1.*"
+        - COMPOSER_FLAGS="--prefer-lowest"
+
+install:
+    - composer require "symfony/symfony:${SYMFONY_VERSION}" --no-interaction --no-update ${COMPOSER_FLAGS}
+    - composer install --no-interaction --prefer-dist ${COMPOSER_FLAGS}
+
+script:
+    - composer validate --strict
+    - bin/ecs check src
+    - bin/phpstan analyse -c phpstan.neon -l max src/
+    - bin/simple-phpunit
