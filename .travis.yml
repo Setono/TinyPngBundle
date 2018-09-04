@@ -22,6 +22,6 @@ install:
 
 script:
     - composer validate --strict
-    - bin/ecs check src
-    - bin/phpstan analyse -c phpstan.neon -l max src/
+    - bin/ecs check Client/ DependencyInjection/
+    - bin/phpstan analyse -c phpstan.neon -l max
     - bin/phpunit
