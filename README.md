@@ -34,10 +34,9 @@ setono_tiny_png:
 
 [ico-version]: https://img.shields.io/packagist/v/setono/tiny-png-bundle.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/setono/TinyPngBundle/master.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/setono/TinyPngBundle.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/Setono/TinyPngBundle/master.svg?style=flat-square
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/Setono/TinyPngBundle.svg?style=flat-square
 
 [link-packagist]: https://packagist.org/packages/setono/tiny-png-bundle
-[link-travis]: https://travis-ci.org/setono/TinyPngBundle
-[link-scrutinizer]: https://scrutinizer-ci.com/g/setono/TinyPngBundle/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/setono/TinyPngBundle
+[link-travis]: https://travis-ci.org/Setono/TinyPngBundle
+[link-code-quality]: https://scrutinizer-ci.com/g/Setono/TinyPngBundle
