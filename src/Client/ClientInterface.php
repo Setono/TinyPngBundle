@@ -22,8 +22,6 @@ interface ClientInterface
      * @param \SplFileInfo $input
      * @param \SplFileInfo $output
      * @param bool         $overwrite
-     *
-     * @return \SplFileInfo
      */
     public function compressFile(\SplFileInfo $input, \SplFileInfo $output, bool $overwrite = true): void;
 }
