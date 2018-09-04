@@ -19,7 +19,8 @@ class SetonoTinyPngExtensionTest extends AbstractExtensionTestCase
     protected function getMinimalConfiguration()
     {
         return [
-            'api_key' => 'api key'
+            'api_key' => 'api key',
+            'proxy' => 'proxy'
         ];
     }
 
@@ -32,5 +33,6 @@ class SetonoTinyPngExtensionTest extends AbstractExtensionTestCase
         $this->load();
 
         $this->assertContainerBuilderHasParameter('setono.tiny_png.api_key', 'api key');
+        $this->assertContainerBuilderHasParameter('setono.tiny_png.proxy', 'proxy');
     }
 }

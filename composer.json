@@ -11,7 +11,8 @@
     ],
     "require": {
         "symfony/config": "^4.1",
-        "symfony/dependency-injection": "^4.1"
+        "symfony/dependency-injection": "^4.1",
+        "tinify/tinify": "^1.5"
     },
     "require-dev": {
         "symfony/phpunit-bridge": "^4.1",

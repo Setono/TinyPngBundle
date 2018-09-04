@@ -23,6 +23,10 @@ final class Configuration implements ConfigurationInterface
                     ->cannotBeEmpty()
                     ->info('Your TinyPNG API key')
                 ->end()
+                ->scalarNode('proxy')
+                    ->cannotBeEmpty()
+                    ->info('The proxy to use')
+                ->end()
             ->end()
         ;
 
