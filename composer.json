@@ -25,9 +25,9 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Setono\\TinyPngBundle\\": "src/",
-            "Setono\\TinyPngBundle\\Tests\\": "tests/"
-        }
+            "Setono\\TinyPngBundle\\": ""
+        },
+        "exclude-from-classmap": [ "/Tests/" ]
     },
     "extra": {
         "branch-alias": {
