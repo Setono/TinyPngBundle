@@ -17,6 +17,7 @@ final class Configuration implements ConfigurationInterface
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('setono_tiny_png');
         $rootNode
+            ->addDefaultsIfNotSet()
             ->children()
                 ->scalarNode('api_key')
                     ->isRequired()
@@ -24,6 +25,7 @@ final class Configuration implements ConfigurationInterface
                     ->info('Your TinyPNG API key')
                 ->end()
                 ->scalarNode('proxy')
+                    ->defaultNull()
                     ->cannotBeEmpty()
                     ->info('The proxy to use')
                 ->end()

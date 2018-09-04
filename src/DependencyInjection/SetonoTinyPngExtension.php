@@ -22,6 +22,7 @@ final class SetonoTinyPngExtension extends Extension
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
 
         $container->setParameter('setono.tiny_png.api_key', $config['api_key']);
+        $container->setParameter('setono.tiny_png.proxy', $config['proxy']);
 
         $loader->load('services.xml');
     }
