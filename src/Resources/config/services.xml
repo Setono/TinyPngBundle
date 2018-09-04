@@ -9,6 +9,6 @@
             <argument>%setono.tiny_png.proxy%</argument>
         </service>
 
-        <service id="Setono\TinyPngBundle\Client\ClientInterface" alias="Setono\TinyPngBundle\Client\Client" />
+        <service id="Setono\TinyPngBundle\Client\ClientInterface" alias="Setono\TinyPngBundle\Client\Client" public="true" />
     </services>
 </container>
