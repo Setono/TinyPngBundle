@@ -9,14 +9,11 @@ class Client implements ClientInterface
     /**
      * @param string      $apiKey
      * @param null|string $proxy
-     *
-     * @throws \Tinify\AccountException
      */
     public function __construct(string $apiKey, ?string $proxy)
     {
         \Tinify\Tinify::setKey($apiKey);
         \Tinify\Tinify::setProxy($proxy);
-        \Tinify\validate();
     }
 
     /**

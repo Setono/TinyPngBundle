@@ -12,7 +12,7 @@ class SetonoTinyPngExtensionTest extends AbstractExtensionTestCase
     protected function getContainerExtensions()
     {
         return [
-            new SetonoTinyPngExtension()
+            new SetonoTinyPngExtension(),
         ];
     }
 
@@ -20,10 +20,9 @@ class SetonoTinyPngExtensionTest extends AbstractExtensionTestCase
     {
         return [
             'api_key' => 'api key',
-            'proxy' => 'proxy'
+            'proxy' => 'proxy',
         ];
     }
-
 
     /**
      * @test

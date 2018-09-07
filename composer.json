@@ -37,5 +37,10 @@
     "config": {
         "bin-dir": "bin",
         "sort-packages": true
+    },
+    "scripts": {
+        "test": "./bin/phpunit",
+        "check-style": "./bin/ecs check Client/ DependencyInjection/ Tests/",
+        "fix-style": "./bin/ecs check --fix Client/ DependencyInjection/ Tests/"
     }
 }
