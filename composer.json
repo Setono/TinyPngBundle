@@ -10,25 +10,28 @@
         }
     ],
     "require": {
-        "php": "^7.1",
-
-        "symfony/config": "^3.4|^4.1",
-        "symfony/dependency-injection": "^3.4|^4.1",
+        "php": "^7.4 | ^8.0 | ^8.1",
+        "symfony/config": "^4.4 | ^5.4 | ^6.0",
+        "symfony/dependency-injection": "^4.4 | ^5.4 | ^6.0",
+        "symfony/http-kernel": "^4.4 | ^5.4 | ^6.0",
         "tinify/tinify": "^1.5"
     },
     "require-dev": {
-        "matthiasnoback/symfony-dependency-injection-test": "^3.0",
-        "phpstan/phpstan": "^0.10.3",
-        "phpunit/phpunit": "^7",
+        "matthiasnoback/symfony-dependency-injection-test": "^4.3",
+        "phpstan/phpstan": "^1.4",
+        "phpunit/phpunit": "^9.5",
         "roave/security-advisories": "dev-master",
-        "symplify/easy-coding-standard": "^4.6"
+        "symplify/easy-coding-standard": "^10.0",
+        "vimeo/psalm": "^4.20"
     },
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
             "Setono\\TinyPngBundle\\": ""
         },
-        "exclude-from-classmap": [ "/Tests/" ]
+        "exclude-from-classmap": [
+            "//"
+        ]
     },
     "extra": {
         "branch-alias": {
@@ -37,11 +40,15 @@
     },
     "config": {
         "bin-dir": "bin",
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/package-versions-deprecated": true
+        }
     },
     "scripts": {
         "test": "./bin/phpunit",
-        "check-style": "./bin/ecs check Client/ DependencyInjection/ Tests/",
-        "fix-style": "./bin/ecs check --fix Client/ DependencyInjection/ Tests/"
+        "check-style": "./bin/ecs check Client/ DependencyInjection/ tests/",
+        "fix-style": "./bin/ecs check --fix Client/ DependencyInjection/ tests/",
+        "psalm": "./bin/psalm"
     }
 }

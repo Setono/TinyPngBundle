@@ -14,10 +14,10 @@ final class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder(): TreeBuilder
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('setono_tiny_png');
+        $treeBuilder = new TreeBuilder('setono_tiny_png');
+        $rootNode = $treeBuilder->getRootNode();
+        /** @psalm-suppress PossiblyUndefinedMethod */
         $rootNode
-            ->addDefaultsIfNotSet()
             ->children()
                 ->scalarNode('api_key')
                     ->isRequired()

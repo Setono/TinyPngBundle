@@ -2,21 +2,21 @@
 
 declare(strict_types=1);
 
-namespace Loevgaard\SyliusOptimizeImagesPlugin\Tests\DependencyInjection;
+namespace Setono\TinyPngBundle\tests\DependencyInjection;
 
 use Matthias\SymfonyDependencyInjectionTest\PhpUnit\AbstractExtensionTestCase;
 use Setono\TinyPngBundle\DependencyInjection\SetonoTinyPngExtension;
 
 class SetonoTinyPngExtensionTest extends AbstractExtensionTestCase
 {
-    protected function getContainerExtensions()
+    protected function getContainerExtensions(): array
     {
         return [
             new SetonoTinyPngExtension(),
         ];
     }
 
-    protected function getMinimalConfiguration()
+    protected function getMinimalConfiguration(): array
     {
         return [
             'api_key' => 'api key',

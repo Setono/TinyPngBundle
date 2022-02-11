@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Setono\TinyPngBundle\Client;
 
+use SplFileInfo;
+
 interface ClientInterface
 {
     /**
@@ -19,9 +21,9 @@ interface ClientInterface
      * Compresses the input file into the output file
      * If overwrite is true, it will overwrite any existing file.
      *
-     * @param \SplFileInfo $input
-     * @param \SplFileInfo $output
-     * @param bool         $overwrite
+     * @param SplFileInfo   $input
+     * @param SplFileInfo   $output
+     * @param bool          $overwrite
      */
-    public function compressFile(\SplFileInfo $input, \SplFileInfo $output, bool $overwrite = true): void;
+    public function compressFile(SplFileInfo $input, SplFileInfo $output, bool $overwrite = true): void;
 }
